@@ -270,22 +270,6 @@ The application should not be exposed directly to the public internet unless app
 
 For internet-facing deployments, use a reverse proxy and HTTPS.
 
-## Deployment Checklist
-
-* [ ] Docker is installed
-* [ ] Docker Compose is available
-* [ ] Repository is cloned
-* [ ] `/var/lib/weather-station` exists
-* [ ] `web/.env` is configured
-* [ ] `DATABASE_URL` points to `/data/weather.db`
-* [ ] Docker image builds successfully
-* [ ] Container starts successfully
-* [ ] Dashboard is accessible
-* [ ] ESP32 can reach the API
-* [ ] Sensor data is stored
-* [ ] Container restart policy is enabled
-* [ ] Database backups are configured
-
 ## Architecture
 
 ```mermaid
