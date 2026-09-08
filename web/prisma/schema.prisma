@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model SensorData {
+  id          String   @id @default(uuid())
+  temperature Float
+  humidity    Float
+  pressure    Float
+  dewPoint    Float    @map("dew_point")
+  heatIndex   Float?   @map("heat_index")
+  timestamp   DateTime
+
+  @@index([timestamp])
+  @@map("sensor_data")
+}
